@@ -47,12 +47,12 @@ class Person {
     this.stomach = [];
   }
 eat(someFood){
-  if (this.stomach.length < 10){
+  if (this.stomach.length <= 10){
     return this.stomach.push(someFood);
     }
   }
 poop(){
-  while (this.stomach.length != 0){
+  if (this.stomach.length != 0){
     return (this.stomach.length = 0);
     }
   }
