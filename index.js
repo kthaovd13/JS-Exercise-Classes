@@ -47,7 +47,7 @@ class Person {
     this.stomach = [];
   }
 eat(someFood){
-  if (this.stomach.length <= 10){
+  if (this.stomach.length < 10){
     return this.stomach.push(someFood);
     }
   }
@@ -75,7 +75,27 @@ toString(){
 */
 
 class Car {
-
+  constructor(model, milesPerGallon){
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
+  }
+fill(gallons){
+  return (this.tank = this.tank + gallons);
+  }
+drive(distance){
+  this.odometer = this.odometer + distance;
+  while (distance / this.milesPerGallon > this.tank){
+    distance--;
+    }
+  if (this.tank === 0){
+    return `I ran out of fuel at ${this.odometer} miles!`;
+    }
+  if (this.tank > 0){
+    return (this.tank = this.tank - distance / this.milesPerGallon);
+    }
+  }
 }
 
 /*
