@@ -203,6 +203,9 @@ class ProjectManager extends Instructor {
   standUp(slack_channel){
     return `${this.name} announces to ${slack_channel}, @channel standy times!`;
   }
+  debugsCode (student, subject){
+    return `${this.name} debugs ${student.name}'s code on ${subject}.`;
+  }
 }
 
 /*
