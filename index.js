@@ -109,7 +109,14 @@ drive(distance){
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-
+  constructor (Person){
+    this.name = Person.name;
+    this.age = Person.age;
+    this.location = Person.location;
+  }
+  speak(){
+    return `Hello my name is ${this.name}, I am from ${this.location}.`;
+  }
 }
 
 /*
